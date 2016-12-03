@@ -1,0 +1,36 @@
+#main-nav {
+	ul {
+		margin-bottom: 0;
+		li {
+			border-left: 1px solid black;
+			a {
+				padding: 20px;
+				display: inline-block;
+			}
+		}
+		li.last {
+			border-right: 1px solid black;
+		}
+		li.active {
+			a {
+				color: $theme-color-hover;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	#main-nav {
+		display: none;
+		ul.list-inline {
+			li {
+				border-left: none;
+				display: block;
+				border-bottom: 1px solid black;
+			}
+			li.last {
+				border-right: none;
+			}
+		}
+	}
+}

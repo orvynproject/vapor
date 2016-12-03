@@ -1,0 +1,162 @@
+html, body {
+	height: 100%;
+	font-size: 16px;
+	font-family: $font-primary;
+	background-color: #111;
+}
+::-webkit-scrollbar {
+  	width: 5px; 
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0; }
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  background: $theme-color; }
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: black; }
+a {
+	text-decoration: none;
+	color: $theme-color;
+	@include transition(.5s);
+	&:focus,
+	&:hover {
+		text-decoration: none;
+		color: $theme-color-hover;
+	}
+}
+
+.bg-dark {
+	background-color: #111;
+	color: #ccc;
+	.thumbnail {
+		border-right: 1px solid #ccc;
+		@include transition(.5s);
+		&:hover {
+			@include box-shadow(0 0 10px 5px #333);
+		}
+	}
+}
+.bg-black {
+	background-color: black;
+	color: #ccc;
+	.thumbnail {
+		border-right: 1px solid #ccc;
+		background-color: #ddd;
+		@include transition(.5s);
+		&:hover {
+			@include box-shadow(0 0 10px 5px #333);
+		}
+	}
+}
+.bg-theme {
+	background-color: $theme-color;
+	color: white;
+	.row {
+		.icon-box {
+			cursor: pointer;
+			line-height: 2;
+			.icon-bullet {
+				background-color: white;
+				border: 1px solid white;
+				border-radius: 50%;
+				display: inline-block;
+				width: 85px;
+				height: 85px;
+				line-height: 6.5;
+				position: relative;
+				text-align: center;
+				@include transition(.5s);
+				i {
+					color: $theme-color;
+					@include transition(.5s);
+				}
+			}
+			&:hover {
+				.icon-bullet {
+					background-color: $theme-color;
+					i {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}
+.bg-img {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	.thumbnail {
+		@include transition(.5s);
+		&:hover {
+			@include box-shadow(0 0 10px 5px #333);
+		}
+	}
+}
+.img {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 300px;
+}
+.meta {
+	padding: 5px 0 5px;
+	small {
+		margin-right: 5px;
+	}
+}
+.no-border {border: none}
+.no-padding {padding: 0}
+.text-theme {color: $theme-color}
+
+article {
+	padding: 10px 0 20px;
+}
+section {
+	padding: 50px 0 50px;
+}
+
+section#services {
+	padding: 50px 0 50px;
+	.row {
+		.caption {
+			display: inline-block;
+			margin: 10px;
+			.title {
+				font-size: 18px;
+				font-weight: bold;
+			}
+			.subtitle {
+				font-size: 14px;
+				color: #ccc;
+			}
+		}
+	}
+}
+@media (max-width: 768px) {
+	section#services {
+		.row {
+			text-align: center;
+			.caption {
+				display: block;
+			}
+		}
+	}
+}
+
+section#latest {
+	.thumbnail {
+		@extend .no-border;
+	}
+}

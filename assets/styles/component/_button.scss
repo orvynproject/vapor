@@ -1,0 +1,10 @@
+.btn-theme {
+	background-color: $theme-color;
+	border-color: $theme-color;
+	@include transition(.5s);
+	&:focus,
+	&:hover {
+		background-color: #333;
+		border-color: #333;
+	}
+}

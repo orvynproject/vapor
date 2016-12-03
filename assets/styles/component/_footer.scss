@@ -1,0 +1,21 @@
+footer {
+	padding: 50px 0 50px;
+	color: white;
+	.gotop {
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		display: none;
+	}
+}
+@media (max-width: 480px) {
+	footer {
+		.list-inline {
+			text-align: center;
+			.pull-right {
+				float: none!important;
+				display: block;
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+#latest.bg-dark {
+	text-align: center;
+	.nav-pills {
+		display: inline-block;
+		li.active {
+			a {
+				background-color: $theme-color;
+				&:focus,
+				&:hover {
+					background-color: $theme-color;
+				}
+			}
+		}
+		li {
+			a {
+				background-color: white;
+				&:focus,
+				&:hover {
+					background-color: $theme-color;
+					color: white;
+				}
+			}
+		}
+	}
+}
